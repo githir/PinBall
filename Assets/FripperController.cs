@@ -35,7 +35,7 @@ public class FripperController : MonoBehaviour
         {
             SetAngle(this.flickAngle);
         }
-        //下矢印キーを押した時右フリッパーを動かす
+        //下矢印キーまたはSキーを押した時右フリッパーを動かす
         if ((Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S)) && (tag == "LeftFripperTag" || tag == "RightFripperTag"))
         {
             SetAngle(this.flickAngle);
@@ -53,6 +53,17 @@ public class FripperController : MonoBehaviour
         if ((Input.GetKeyUp(KeyCode.DownArrow) || Input.GetKeyUp(KeyCode.S)) && (tag == "LeftFripperTag" || tag == "RightFripperTag"))
         {
             SetAngle(this.defaultAngle);
+        }
+
+        //タッチ操作に対応する
+        //資料 https://docs.unity3d.com/ja/current/ScriptReference/Touch.html , https://torikasyu.com/?p=668
+        Debug.Log("touchCount="+ Input.touchCount);
+        if (Input.touchCount > 0)
+        {
+            foreach (Touch t in Input.touches)
+            {
+                Debug.Log("x="+ t.position.x + " y=" + t.position.y);
+            }
         }
 
     }

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4193309100391134662}
   - component: {fileID: 4193309100391134666}
   - component: {fileID: -7273983115642777292}
+  - component: {fileID: -3077791871891117551}
   m_Layer: 0
   m_Name: SmallCloudPrefab
   m_TagString: SmallCloudTag
@@ -91,7 +92,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3958885869730247949}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 4f76e8def845dba4787011b2168d9952, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
@@ -120,5 +121,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 363a533ffa8813049bdb63fc27e9c99a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-3077791871891117551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3958885869730247949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c138eeaed825bf42af2581349418d83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

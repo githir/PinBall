@@ -22,12 +22,13 @@ public class ScoreTextController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        this.scoreText.GetComponent<Text>().text = this.score.ToString("D6");
+
     }
 
     //スコアを加算する関数
     public void AddScore(int val)
     {
         this.score += val;
+        this.scoreText.GetComponent<Text>().text = this.score.ToString("D6");
     }
 }

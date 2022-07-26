@@ -12,11 +12,15 @@ public class BallController : MonoBehaviour
     //ゲームオーバを表示するテキスト
     private GameObject gameoverText;
 
+    //ゲーム開始終了再起動
+    private GameObject gameState;
+
     // Use this for initialization
     void Start()
     {
         //シーン中のGameOverTextオブジェクトを取得
         this.gameoverText = GameObject.Find("GameOverText");
+        this.gameState = GameObject.Find("GameState");
     }
 
     // Update is called once per frame
@@ -27,6 +31,7 @@ public class BallController : MonoBehaviour
         {
             //GameoverTextにゲームオーバを表示
             this.gameoverText.GetComponent<Text>().text = "Game Over";
+            this.gameState.GetComponent<GameStateController>().isGameOver = true;
         }
     }
 }
